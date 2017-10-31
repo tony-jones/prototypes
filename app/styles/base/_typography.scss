@@ -1,0 +1,19 @@
+/*
+==========================================================
+                     Typography
+==========================================================
+*/
+
+html{
+  font-family: "Aktiv Grotesk", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #3197D6;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
