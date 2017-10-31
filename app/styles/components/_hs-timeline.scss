@@ -1,0 +1,57 @@
+.hs-timeline-item__link {
+  display: block;
+  font-size: 13px;
+}
+    
+.hs-timeline {
+  list-style: none;
+  margin: 0;
+  padding-bottom: 15px;
+
+  &-item {
+    margin: 0;
+    padding-left: 18px;
+    padding-top: 11px;
+    position: relative;
+    line-height: 14px;
+
+    &::before {
+      background: #fff;
+      border-radius: 100%;
+      box-shadow: inset 0 0 0 1px #eceff2, 0 0 0 2px #eceff2;
+      content: "";
+      height: 8px;
+      left: 2px;
+      position: absolute;
+      top: 14px;
+      width: 8px;
+      z-index: 2;
+    }
+
+    &:after {
+      background: #ECEFF2;
+      content: "";
+      height: 120%;
+      left: 5px;
+      position: absolute;
+      top: 4px;
+      width: 2px;
+      z-index: 1;
+    }
+
+    &:first-child {
+      // Adjusts the top spacing for the first timeline item
+      padding-top: 0;
+      &:before {
+        top: 4px;
+      }
+    }
+
+    &:last-child {
+      // Hides timeline line at the bottom of the last item
+      &:after {
+        height: 0;
+      }
+    }
+  }
+}
